@@ -1,0 +1,313 @@
+#:kivy 1.9.2
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+windowsManager:
+    # login:
+    # pop:
+
+
+<Graphic_page>:
+    name : 'Graphic_page'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Graphic"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.3,"top":1}
+        on_release :
+            root.manager.transition = NoTransition()
+            app.root.current = 'Graphic_page1'
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Text"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.6,"top":1}
+        on_release :
+            root.manager.transition = NoTransaction()
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Main floor"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.3,"top":0.7}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "2nd floor"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.3,"top":0.4}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Master bedroom"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.40,"top":0.55}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+    
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "WashRoom"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.6}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Bedroom1"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.65}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Living"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.35}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Dining"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.30}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Family"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.25}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Family_page'
+
+    # Button:
+    # text: "back"
+    # size_hint:0.1,0.07
+    # pos_hint:{"x":0,"top":1}
+    # on_release :
+    #     app.root.current = 'logpage'
+    #     root.manager.transition.direction = "right"
+    
+    # Button:
+    # text: "back"
+    # size_hint:0.1,0.07
+    # pos_hint:{"x":0,"top":1}
+    # on_release :
+    #     app.root.current = 'logpage'
+    #     root.manager.transition.direction = "right"
+
+
+
+
+<Graphic_page1>:
+    name : 'Graphic_page1'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    
+    Label:
+        text : "Map is not given"
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0.5,"top":0.5}
+    
+    Button:
+        text: "Back"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.5,"top":1}
+        on_release :
+            root.manager.transition.direction = "right"
+            app.root.current = 'Graphic_page'
+    
+
+
+<Family_page>:
+    name : 'Family_page'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    Label:
+        text : "Family"
+        size_hint : 0.05 , 0.05
+        pos_hint : {"x" : 0.5, "top" : 1} 
+    
+    Button:
+        text: "Back"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.1,"top":1}
+        on_release :
+            root.manager.transition.direction = "right"
+            app.root.current = 'Graphic_page'
+
+    Button:
+        text: "Watch"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.45,"top":0.8}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Watch_page'
+
+    Button:
+        text: "Blinds"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.25,"top":0.65}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Watch_page'
+
+    Button:
+        text: "Lights"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.65,"top":0.65}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Watch_page'
+
+    Button:
+        text: "Listen"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.45,"top":0.50}
+        on_release :
+            root.manager.transition.direction = "left"
+            app.root.current = 'Watch_page'
+
+<Watch_page>:
+    name : 'Watch_page'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+
+    
+    Label:
+        text : "watch"
+        size_hint : 0.05 , 0.05
+        pos_hint : {"x" : 0.5, "top" : 1} 
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Apple Tv"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.8}
+        on_release :
+            app.root.current = 'logpage'
+            root.manager.transition.direction = "right"
+    
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Cable box"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.7}
+        on_release :
+            app.root.current = 'logpage'
+            root.manager.transition.direction = "right"
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Android Box"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.65}
+        on_release :
+            app.root.current = 'Family_page'
+            root.manager.transition.direction = "right"
+
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "DVD"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.6}
+        on_release :
+            app.root.current = 'Family_page'
+            root.manager.transition.direction = "right"
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Camera"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.55}
+        on_release :
+            app.root.current = 'logpage'
+            root.manager.transition.direction = "right"
+
+    Button:
+        background_color: 0, 0, 0, 0
+        text: "Family"
+        size_hint:0.1,0.07
+        pos_hint:{"x":0.35,"top":0.25}
+        on_release :
+            app.root.current = 'logpage'
+            root.manager.transition.direction = "right"

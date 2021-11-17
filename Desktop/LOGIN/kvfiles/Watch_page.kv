@@ -1,0 +1,82 @@
+#:kivy 1.9.2
+<Watch_page>:
+    name : 'Watch_page'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    Button:
+        pos_hint:{"x":0.15,"top":0.995}
+        size_hint:0.05, 0.05
+        on_release :
+            root.manager.transition.direction = "right"
+            app.root.current = 'Family_page'
+        Image:    
+            source :'Images/ret.jpg'
+            size: 50,50
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+            allow_stretch: True
+            keep_ratio: False
+    Label:
+        text : "watch"
+        size_hint : 0.05 , 0.05
+        pos_hint : {"x" : 0.5, "top" : 1} 
+
+    # Button:
+    #     background_color: 0, 0, 0, 0
+    #     text: "Apple Tv"
+    #     size_hint:0.1,0.07
+    #     pos_hint:{"x":0.35,"top":0.8}
+    #     on_release :
+    #         root.manager.transition.direction = "left"
+    #         app.root.current = 'Apple_TV_page'
+    
+    # Button:
+    #     background_color: 0, 0, 0, 0
+    #     text: "Cable box"
+    #     size_hint:0.1,0.07
+    #     pos_hint:{"x":0.35,"top":0.75}
+    #     on_release :
+    #         root.manager.transition.direction = "left"
+    #         app.root.current = 'Cable_box_page'
+
+    # Button:
+    #     background_color: 0, 0, 0, 0
+    #     text: "Android Box"
+    #     size_hint:0.1,0.07
+    #     pos_hint:{"x":0.35,"top":0.7}
+    #     on_release :
+    #         root.manager.transition.direction = "left"
+    #         app.root.current = 'Android_box_page'
+
+
+    # Button:
+    #     background_color: 0, 0, 0, 0
+    #     text: "DVD"
+    #     size_hint:0.1,0.07
+    #     pos_hint:{"x":0.35,"top":0.65}
+    #     on_release :
+    #         root.manager.transition.direction = "left"
+    #         app.root.current = 'DVD_page'
+
+    # Button:
+    #     background_color: 0, 0, 0, 0
+    #     text: "Camera"
+    #     size_hint:0.1,0.07
+    #     pos_hint:{"x":0.35,"top":0.6}
+    #     on_release :
+    #         root.manager.transition.direction = "left"
+    #         app.root.current = 'Camera_page'

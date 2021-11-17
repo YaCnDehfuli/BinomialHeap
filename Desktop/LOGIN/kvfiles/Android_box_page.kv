@@ -1,0 +1,40 @@
+#:kivy 1.9.2
+
+<Android_box_page>:
+    name : 'Android_box_page'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    
+    Label:
+        text : "Android box"
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0.5,"top":0.5}
+    
+    Button:
+        pos_hint:{"x":0.15,"top":0.995}
+        size_hint:0.05, 0.05
+        on_release :
+            root.manager.transition.direction = "right"
+            app.root.current = 'Watch_page'
+        Image:    
+            source :'Images/ret.jpg'
+            size: 50,50
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+            allow_stretch: True
+            keep_ratio: False

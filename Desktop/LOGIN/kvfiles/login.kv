@@ -1,0 +1,48 @@
+#:kivy 1.9.2
+<login>:
+    name : 'login'
+    username : username
+    pasword : password
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Images/Back.jpg'
+    Image:    
+        source :'Images/Back.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 1, 1
+    Image:    
+        source :'Images/LOGIN.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint: 0.1, 0.07
+        pos_hint: {"x":0,"top":1}
+    Label:
+        text : "Username"
+        size_hint : 0.2 , 0.2
+        pos_hint : {"x" : 0.1, "top" : 0.9} 
+    TextInput:
+        id: username
+        hint_text:'Enter your email or username'
+        multiline :False
+        size_hint : 0.5 , 0.05
+        pos_hint : {"x" : 0.30, "top" : 0.825}
+    Label:
+        text : "Password"
+        size_hint : 0.2 , 0.2
+        pos_hint : {"x" : 0.1, "top" : 0.7} 
+    TextInput:
+        id: password
+        password: True
+        hint_text:'Enter your password'
+        multiline :False
+        size_hint : 0.5 , 0.05
+        pos_hint : {"x" : 0.30, "top" : 0.625}
+    Button:
+        text: "Enter"
+        size_hint:0.2,0.1
+        pos_hint:{"x":0.35,"top":0.2}
+        on_release :
+            root.check()
